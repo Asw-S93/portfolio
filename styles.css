@@ -725,6 +725,203 @@ body {
     font-size: 1.3rem;
 }
 
+/* ===== Certifications Section ===== */
+.certifications {
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 32px;
+}
+
+.cert-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px var(--accent-glow);
+}
+
+.credly-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(255, 90, 0, 0.08);
+    border-bottom: 1px solid rgba(255, 90, 0, 0.15);
+}
+
+.credly-logo-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.credly-icon {
+    flex-shrink: 0;
+}
+
+.cert-badge-status {
+    background: #10B981;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cert-body {
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.cert-badge-visual {
+    flex-shrink: 0;
+}
+
+.badge-ring {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    transition: transform 0.4s ease;
+}
+
+.cert-card:hover .badge-ring {
+    transform: scale(1.08) rotate(3deg);
+}
+
+.unity-ring {
+    background: radial-gradient(circle at center, rgba(0, 242, 195, 0.15) 0%, transparent 70%);
+}
+
+.aws-ring {
+    background: radial-gradient(circle at center, rgba(255, 153, 0, 0.15) 0%, transparent 70%);
+}
+
+.cert-details {
+    flex: 1;
+}
+
+.cert-issuer {
+    margin-bottom: 4px;
+}
+
+.issuer-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+}
+
+.cert-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.cert-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    padding-left: 10px;
+    border-left: 2px solid var(--accent);
+}
+
+.cert-meta code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    background: var(--bg-tertiary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--text-primary);
+}
+
+.cert-description {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.cert-skills .skill-tag {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.cert-actions {
+    display: flex;
+}
+
+.btn-credly {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FF5A00;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    font-size: 0.88rem;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(255, 90, 0, 0.25);
+}
+
+.btn-credly:hover {
+    background: #E04F00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 90, 0, 0.4);
+}
+
 /* ===== Footer ===== */
 .footer {
     padding: 30px 24px;
@@ -819,5 +1016,30 @@ body {
         right: 70px;
         width: 40px;
         height: 40px;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cert-meta {
+        border-left: none;
+        border-top: 2px solid var(--accent);
+        padding-left: 0;
+        padding-top: 8px;
+    }
+
+    .cert-skills {
+        justify-content: center;
+    }
+
+    .cert-actions {
+        justify-content: center;
     }
 }

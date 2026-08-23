@@ -37,11 +37,11 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 // ===== Typing Animation =====
 const typingTexts = [
-    'Unity Developer',
-    'XR Specialist',
-    '3D Generalist',
-    'Game Designer',
-    'Tech Lead'
+    'Senior Unity Developer',
+    'Unity Certified Professional',
+    'AWS Cloud Architect',
+    'XR & Spatial Computing Specialist',
+    'Principal Tech Lead'
 ];
 
 let textIndex = 0;
