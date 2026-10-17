@@ -1,49 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambhav Aswal | Unity Developer & 3D Generalist</title>
-    <meta name="description" content="Senior Unity Developer and Technical 3D Artist with 6+ years of experience creating interactive experiences for mobile, desktop, web, and XR platforms.">
-    <meta name="keywords" content="Unity Developer, XR Developer, AR VR, Game Developer, 3D Artist, C# Programmer">
+    <title>Sambhav Aswal | Principal Software Engineer</title>
+    <meta name="description" content="Principal Software Engineer specializing in AI-Native Development, Unity Architecture, Spatial Computing (XR), and Cloud Infrastructure with 6+ years of experience.">
+    <meta name="keywords" content="Principal Software Engineer, AI Native Development, Unity Developer, XR Architect, Spatial Computing, AWS Cloud Architect, C# Programmer">
     <meta name="author" content="Sambhav Aswal">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Sambhav Aswal | Unity Developer & 3D Generalist">
-    <meta property="og:description" content="Senior Unity Developer with 6+ years building games and XR experiences">
+    <meta property="og:title" content="Sambhav Aswal | Principal Software Engineer">
+    <meta property="og:description" content="Principal Software Engineer specializing in AI-Native Development, Unity Architecture, and Spatial Computing">
     <meta property="og:type" content="website">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-    </button>
+    <!-- Ambient Background Grid & Glow -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-grid"></div>
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+    </div>
 
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">SA</a>
-            <ul class="nav-links">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-mark">SA</span>
+                <span class="logo-text">Sambhav Aswal</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certifications">Certifications</a></li>
@@ -51,100 +43,142 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="#contact" class="nav-cta">Let's Talk</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero" id="hero">
-        <div class="hero-bg"></div>
         <div class="hero-content">
             <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-title">Sambhav Aswal</h1>
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    <span>Principal Software Engineer &bull; AI-Native &amp; Spatial Systems</span>
+                </div>
+                <h1 class="hero-title">
+                    Engineering Intelligent &amp; Immersive Experiences
+                </h1>
                 <p class="hero-subtitle">
-                    <span class="typing-text"></span>
-                    <span class="cursor">|</span>
+                    <span class="hero-name">Sambhav Aswal</span> &mdash; 
+                    <span class="typing-text"></span><span class="cursor">|</span>
                 </p>
                 <p class="hero-description">
-                    Unity Developer & Technical 3D Artist with <strong>6+ years</strong> of experience 
-                    creating interactive experiences for mobile, desktop, web, and XR platforms.
+                    <strong>Principal Software Engineer</strong> with <strong>6+ years</strong> of experience architecting AI-native workflows, cross-platform Unity systems, spatial computing (XR) installations, and scalable cloud infrastructure.
                 </p>
+                <div class="hero-pills">
+                    <span class="hero-pill">AI-Native Engineering</span>
+                    <span class="hero-pill">Unity &amp; C# Architecture</span>
+                    <span class="hero-pill">Spatial Computing (XR)</span>
+                    <span class="hero-pill">AWS Cloud</span>
+                </div>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Explore Featured Work</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="code-window">
+                <div class="code-window spotlight-card">
                     <div class="code-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="code-title">Developer.cs</span>
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-tab">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <span>PrincipalArchitect.cs</span>
+                        </div>
+                        <span class="code-badge">AI-Native</span>
                     </div>
-                    <pre class="code-content"><code><span class="keyword">public class</span> <span class="class-name">Developer</span> : <span class="class-name">MonoBehaviour</span>
-{
-    <span class="keyword">public string</span> name = <span class="string">"Sambhav"</span>;
-    <span class="keyword">public string[]</span> skills = {
-        <span class="string">"Unity"</span>, <span class="string">"C#"</span>, <span class="string">"XR"</span>,
-        <span class="string">"3D Art"</span>, <span class="string">"Game Dev"</span>
-    };
-    
-    <span class="keyword">void</span> <span class="function">Start</span>() {
-        <span class="function">BuildAmazingExperiences</span>();
-    }
-}</code></pre>
+                    <pre class="code-content"><code><span class="line"><span class="ln">01</span><span class="keyword">public sealed class</span> <span class="class-name">PrincipalEngineer</span> : <span class="class-name">SystemsArchitect</span></span>
+<span class="line"><span class="ln">02</span>{</span>
+<span class="line"><span class="ln">03</span>    <span class="keyword">public string</span> Name =&gt; <span class="string">"Sambhav Aswal"</span>;</span>
+<span class="line"><span class="ln">04</span>    <span class="keyword">public string</span> Role =&gt; <span class="string">"Principal Software Engineer"</span>;</span>
+<span class="line"><span class="ln">05</span></span>
+<span class="line"><span class="ln">06</span>    <span class="keyword">public string</span>[] Pillars =&gt; <span class="keyword">new</span>[] {</span>
+<span class="line"><span class="ln">07</span>        <span class="string">"AI-Native Dev"</span>, <span class="string">"Unity &amp; C#"</span>,</span>
+<span class="line"><span class="ln">08</span>        <span class="string">"Spatial XR"</span>,    <span class="string">"AWS Cloud"</span></span>
+<span class="line"><span class="ln">09</span>    };</span>
+<span class="line"><span class="ln">10</span></span>
+<span class="line"><span class="ln">11</span>    <span class="keyword">public async</span> <span class="class-name">Task</span> <span class="function">ExecuteVisionAsync</span>() {</span>
+<span class="line"><span class="ln">12</span>        <span class="keyword">await</span> <span class="function">OrchestrateAIAgents</span>();</span>
+<span class="line"><span class="ln">13</span>        <span class="function">DeployImmersiveSystems</span>();</span>
+<span class="line"><span class="ln">14</span>    }</span>
+<span class="line"><span class="ln">15</span>}</span></code></pre>
+                    <div class="code-statusbar">
+                        <span><span class="status-indicator"></span> Ready</span>
+                        <span>UTF-8 &bull; C# 12 &bull; Agentic Mode</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
             <span>Scroll</span>
             <div class="scroll-arrow"></div>
-        </div>
+        </a>
     </header>
 
     <!-- About Section -->
     <section class="section about" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <span class="section-eyebrow">01 / Overview</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        I'm a <strong>Senior Software Engineer</strong> and <strong>Principal Lead</strong> 
-                        specializing in Unity development and interactive 3D experiences. My journey spans 
-                        across game development, mixed reality installations, and accessibility-focused applications.
+                    <p class="lead-paragraph">
+                        I'm a <strong>Principal Software Engineer</strong> specializing in <strong>AI-Native software engineering</strong>, real-time 3D architecture, and interactive spatial experiences.
                     </p>
                     <p>
-                        From heading the development of mixed reality kiosks at the <strong>National Museum, New Delhi</strong> 
-                        to consulting on XR projects with <strong>IIT Delhi</strong>, I bring both technical expertise 
-                        and creative vision to every project.
+                        My work bridges high-performance engine programming, multi-agent AI workflows, mixed reality installations, and WCAG-compliant accessible platforms. From heading the engineering of mixed reality kiosks at the <strong>National Museum, New Delhi</strong> to consulting on XR architecture with <strong>IIT Delhi</strong>, I combine deep systems architecture with creative technical direction.
                     </p>
                     <p>
-                        When I'm not coding, you'll find me mentoring junior developers, exploring new 
-                        technologies, or working on indie game projects.
+                        Beyond architecting production systems, I mentor engineering teams, pioneer AI-native development pipelines, and teach next-generation creators as Guest Faculty.
                     </p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-card">
+                    <div class="stat-card spotlight-card">
                         <span class="stat-number">6+</span>
-                        <span class="stat-label">Years Experience</span>
+                        <span class="stat-label">Years Engineering</span>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card spotlight-card">
+                        <span class="stat-number">AI</span>
+                        <span class="stat-label">Native Workflows</span>
+                    </div>
+                    <div class="stat-card spotlight-card">
                         <span class="stat-number">5</span>
                         <span class="stat-label">MR Kiosks Deployed</span>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card spotlight-card">
                         <span class="stat-number">10+</span>
-                        <span class="stat-label">Published Projects</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">XR</span>
-                        <span class="stat-label">Specialist</span>
+                        <span class="stat-label">Shipped Products</span>
                     </div>
                 </div>
             </div>
@@ -154,50 +188,111 @@
     <!-- Skills Section -->
     <section class="section skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="section-header">
+                <span class="section-eyebrow">02 / Capabilities</span>
+                <h2 class="section-title">Skills &amp; Expertise</h2>
+                <p class="section-subtitle">Full-spectrum technical leadership across AI-native engineering, real-time 3D engines, spatial computing, and cloud infrastructure</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon">💻</div>
-                    <h3>Programming & Engine</h3>
+                <!-- AI-Native Development (Featured) -->
+                <div class="skill-category skill-featured spotlight-card">
+                    <div class="skill-card-top">
+                        <div class="skill-icon-wrap ai-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="skill-badge">Core Focus</span>
+                    </div>
+                    <h3>AI-Native Development</h3>
                     <ul class="skill-list">
-                        <li>C# Development & Object-Oriented Architecture</li>
-                        <li>Unity Engine (URP, HDRP, Mobile & PC)</li>
-                        <li>Gameplay State Machines & Optimization</li>
-                        <li>ML Integration (Unity Barracuda / Sentis)</li>
-                        <li>C++ & Native Plugin Development</li>
+                        <li>Agentic Coding &amp; Multi-Agent Orchestration</li>
+                        <li>LLM Integration, RAG &amp; Tool-Use Pipelines</li>
+                        <li>Model Context Protocol (MCP) &amp; Custom Tooling</li>
+                        <li>On-Device Neural Inference (Unity Sentis / Barracuda)</li>
+                        <li>AI-Driven Automated Testing &amp; Asset Pipelines</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon">🥽</div>
-                    <h3>XR & Spatial Computing</h3>
+
+                <!-- Systems & Engine Architecture -->
+                <div class="skill-category spotlight-card">
+                    <div class="skill-card-top">
+                        <div class="skill-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Systems &amp; Engine Architecture</h3>
                     <ul class="skill-list">
-                        <li>AR/VR/MR Applications (ARFoundation, OpenXR)</li>
-                        <li>WebXR & Interactive Browser 3D</li>
-                        <li>OpenCV Integration & Machine Vision</li>
-                        <li>RGBD SLAM & Hardware Kiosks</li>
-                        <li>Unity-Arduino Embedded Systems</li>
+                        <li>C# Architecture &amp; SOLID Design Patterns</li>
+                        <li>Unity Engine (URP, HDRP, Mobile, Desktop, Web)</li>
+                        <li>State Machines, Memory &amp; Frame Optimization</li>
+                        <li>C++ &amp; Native Plugin Interop</li>
+                        <li>WCAG Accessibility (A11y) Frameworks</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon">☁️</div>
-                    <h3>Cloud & Infrastructure</h3>
+
+                <!-- XR & Spatial Computing -->
+                <div class="skill-category spotlight-card">
+                    <div class="skill-card-top">
+                        <div class="skill-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-4.5l-2-3h-3l-2 3H4a2 2 0 0 1-2-2V8z"/>
+                                <circle cx="7.5" cy="12" r="1.5"/>
+                                <circle cx="16.5" cy="12" r="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>XR &amp; Spatial Computing</h3>
                     <ul class="skill-list">
-                        <li>AWS (S3, CloudFront, EC2, Lambda)</li>
-                        <li>Cloud Architecture & Asset Delivery</li>
-                        <li>Firebase Realtime DB & Auth</li>
-                        <li>GCP & RESTful API Integration</li>
-                        <li>CI/CD & Automated Game Builds</li>
+                        <li>AR/VR/MR Systems (ARFoundation, OpenXR)</li>
+                        <li>WebXR &amp; Interactive Browser 3D (Three.js)</li>
+                        <li>OpenCV Integration &amp; Computer Vision</li>
+                        <li>RGBD SLAM &amp; Interactive Museum Kiosks</li>
+                        <li>Unity-Arduino Hardware &amp; Embedded IoT</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon">🎨</div>
-                    <h3>3D Art & Tools</h3>
+
+                <!-- Cloud & Infrastructure -->
+                <div class="skill-category spotlight-card">
+                    <div class="skill-card-top">
+                        <div class="skill-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Cloud &amp; Infrastructure</h3>
                     <ul class="skill-list">
-                        <li>3D Modeling & Technical Art (Maya, ZBrush)</li>
-                        <li>PBR Texturing & Substance Painter</li>
-                        <li>Shader Graph & Custom Shaders (HLSL)</li>
-                        <li>Animation, Rigging & Cinematics</li>
-                        <li>Godot Engine & Adobe Creative Cloud</li>
+                        <li>AWS Architecture (S3, CloudFront, EC2, Lambda)</li>
+                        <li>Distributed Asset Delivery &amp; Addressables</li>
+                        <li>Firebase Realtime DB &amp; Authentication</li>
+                        <li>GCP &amp; RESTful Microservice Integration</li>
+                        <li>CI/CD Pipelines &amp; Automated Multi-Platform Builds</li>
+                    </ul>
+                </div>
+
+                <!-- 3D Technical Art & Shaders -->
+                <div class="skill-category spotlight-card">
+                    <div class="skill-card-top">
+                        <div class="skill-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Technical Art &amp; Shaders</h3>
+                    <ul class="skill-list">
+                        <li>Shader Graph &amp; Custom HLSL Shaders</li>
+                        <li>3D Modeling &amp; Pipeline Optimization (Maya, ZBrush)</li>
+                        <li>PBR Texturing &amp; Substance Painter</li>
+                        <li>Rigging, Procedural Animation &amp; Cinematics</li>
+                        <li>Godot Engine &amp; Real-Time VFX</li>
                     </ul>
                 </div>
             </div>
@@ -207,12 +302,15 @@
     <!-- Certifications Section -->
     <section class="section certifications" id="certifications">
         <div class="container">
-            <h2 class="section-title">Certifications & Credentials</h2>
-            <p class="section-subtitle">Official industry certifications verified via Credly</p>
+            <div class="section-header">
+                <span class="section-eyebrow">03 / Verified Credentials</span>
+                <h2 class="section-title">Certifications &amp; Credentials</h2>
+                <p class="section-subtitle">Official industry certifications verified via Credly</p>
+            </div>
 
             <div class="certifications-grid">
                 <!-- Unity Certification Card -->
-                <div class="cert-card unity-cert">
+                <div class="cert-card unity-cert spotlight-card">
                     <div class="credly-banner">
                         <div class="credly-logo-tag">
                             <svg class="credly-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -249,7 +347,7 @@
                                     <strong>Credential ID:</strong> <code>911a467778634d7380a8b8735080026d</code>
                                 </span>
                                 <span class="meta-item">
-                                    <strong>Issued:</strong> Jun 19, 2026 • <strong>Valid Through:</strong> Jun 19, 2029
+                                    <strong>Issued:</strong> Jun 19, 2026 &bull; <strong>Valid Through:</strong> Jun 19, 2029
                                 </span>
                             </div>
 
@@ -279,7 +377,7 @@
                 </div>
 
                 <!-- AWS Certification Card -->
-                <div class="cert-card aws-cert">
+                <div class="cert-card aws-cert spotlight-card">
                     <div class="credly-banner">
                         <div class="credly-logo-tag">
                             <svg class="credly-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -308,7 +406,7 @@
                             <div class="cert-issuer">
                                 <span class="issuer-name">Amazon Web Services</span>
                             </div>
-                            <h3 class="cert-title">AWS Certified Solutions Architect & Cloud Developer</h3>
+                            <h3 class="cert-title">AWS Certified Solutions Architect &amp; Cloud Developer</h3>
                             
                             <div class="cert-meta">
                                 <span class="meta-item">
@@ -327,7 +425,7 @@
                                 <span class="skill-tag">AWS Cloud</span>
                                 <span class="skill-tag">Amazon S3</span>
                                 <span class="skill-tag">CloudFront CDN</span>
-                                <span class="skill-tag">EC2 & Lambda</span>
+                                <span class="skill-tag">EC2 &amp; Lambda</span>
                                 <span class="skill-tag">Cloud Security</span>
                             </div>
 
@@ -350,82 +448,101 @@
     <!-- Projects Section -->
     <section class="section projects" id="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-eyebrow">04 / Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Production deployments across museum installations, accessible edtech, spatial computing, and interactive media</p>
+            </div>
             <div class="projects-grid">
-                <article class="project-card featured">
+                <article class="project-card featured spotlight-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span>🏛️</span>
+                            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="3" y1="22" x2="21" y2="22"></line>
+                                <line x1="6" y1="18" x2="6" y2="11"></line>
+                                <line x1="10" y1="18" x2="10" y2="11"></line>
+                                <line x1="14" y1="18" x2="14" y2="11"></line>
+                                <line x1="18" y1="18" x2="18" y2="11"></line>
+                                <polygon points="12 2 20 7 4 7"></polygon>
+                            </svg>
                         </div>
                     </div>
                     <div class="project-content">
-                        <span class="project-tag">Featured</span>
+                        <span class="project-tag">Featured Architecture</span>
                         <h3>National Museum MR Kiosks</h3>
                         <p>
-                            Led development of 5 interactive mixed reality kiosks for public display. 
-                            Handled 3D environment optimization, Unity-Arduino communication, 
-                            and embedded systems integration.
+                            Architected and led the development of 5 interactive mixed reality kiosks for public exhibition at the National Museum, New Delhi. Engineered real-time 3D optimization, custom Unity-Arduino hardware communication, and resilient embedded kiosk systems.
                         </p>
                         <div class="project-tech">
                             <span>Unity</span>
                             <span>Mixed Reality</span>
-                            <span>Arduino</span>
-                            <span>C#</span>
+                            <span>Arduino IoT</span>
+                            <span>C# Architecture</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card spotlight-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span>♿</span>
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="4.5" r="2.5"></circle>
+                                <path d="m10.2 6.3-3.9 3.9"></path>
+                                <path d="m13.8 6.3 3.9 3.9"></path>
+                                <path d="M12 7v10"></path>
+                                <path d="m9 22 3-5 3 5"></path>
+                            </svg>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Accessibility Integration</h3>
+                        <h3>WCAG Accessibility Framework</h3>
                         <p>
-                            Developed bespoke functionality to make Unity applications 
-                            adhere to WCAG accessibility standards.
+                            Engineered bespoke accessibility architecture enabling interactive Unity applications to meet strict WCAG compliance, screen-reader interoperability, and keyboard navigation standards.
                         </p>
                         <div class="project-tech">
                             <span>Unity</span>
-                            <span>WCAG</span>
-                            <span>A11y</span>
+                            <span>WCAG 2.1</span>
+                            <span>A11y Architecture</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card spotlight-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span>🎓</span>
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3>IIT Delhi XR Consulting</h3>
                         <p>
-                            Worked with IIT Delhi Design Department on AR/VR projects. 
-                            Designed software architecture and mentored junior developers.
+                            Partnered with the IIT Delhi Design Department on research-grade AR/VR initiatives. Designed modular software architecture and mentored engineering cohorts.
                         </p>
                         <div class="project-tech">
                             <span>AR/VR</span>
-                            <span>Architecture</span>
-                            <span>Mentorship</span>
+                            <span>Systems Design</span>
+                            <span>Technical Leadership</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card spotlight-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span>🌐</span>
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>WebXR Experiences</h3>
+                        <h3>WebXR Spatial Experiences</h3>
                         <p>
-                            Interactive WebXR demos bringing immersive experiences 
-                            to the browser without app downloads.
+                            Built frictionless browser-native WebXR experiences delivering immersive 3D and spatial interactions directly on the web without native app installs.
                         </p>
                         <div class="project-tech">
                             <span>WebXR</span>
@@ -435,42 +552,45 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card spotlight-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span>⚔️</span>
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3>Kaedawn Wars</h3>
                         <p>
-                            Windows game project showcasing combat systems, 
-                            game design, and 3D asset production.
+                            PC action strategy title showcasing modular combat state machines, custom shaders, AI behavior trees, and end-to-end 3D asset pipelines.
                         </p>
                         <div class="project-tech">
                             <span>Unity</span>
-                            <span>Game Design</span>
-                            <span>Windows</span>
+                            <span>Combat AI</span>
+                            <span>PC / Windows</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card spotlight-card">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span>📱</span>
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Mobile Games Collection</h3>
+                        <h3>Mobile Games Suite</h3>
                         <p>
-                            Various Android games including My Digi-dex Lite, 
-                            Motivate Me, NCR Racer, and more.
+                            Shipped multiple Android titles including My Digi-dex Lite, Motivate Me, and NCR Racer with optimized mobile rendering and telemetry.
                         </p>
                         <div class="project-tech">
                             <span>Unity</span>
                             <span>Android</span>
-                            <span>Mobile</span>
+                            <span>Mobile Optimization</span>
                         </div>
                     </div>
                 </article>
@@ -481,47 +601,51 @@
     <!-- Experience Section -->
     <section class="section experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Experience & Education</h2>
+            <div class="section-header">
+                <span class="section-eyebrow">05 / Career</span>
+                <h2 class="section-title">Experience &amp; Education</h2>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content spotlight-card">
                         <span class="timeline-date">Current</span>
-                        <h3>Senior Software Engineer</h3>
+                        <h3>Principal Software Engineer</h3>
                         <p class="timeline-company">Magic Edtech</p>
-                        <p>Leading development of educational technology solutions and interactive learning experiences.</p>
+                        <p>Spearheading architecture and AI-native development of interactive educational technology platforms, accessible learning systems, and cross-platform experiences.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content spotlight-card">
                         <span class="timeline-date">Ongoing</span>
                         <h3>Guest Faculty</h3>
                         <p class="timeline-company">AJK MCRC, Jamia Millia Islamia</p>
-                        <p>Teaching animation, VFX, and game development to the next generation of creators.</p>
+                        <p>Teaching game architecture, animation, VFX, and interactive media development to graduate and undergraduate creators.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content spotlight-card">
                         <span class="timeline-date">Previous</span>
                         <h3>Senior Unity Developer</h3>
                         <p class="timeline-company">Vizara Technologies Pvt. Ltd.</p>
-                        <p>Developed XR applications, led National Museum project, and consulted for IIT Delhi.</p>
+                        <p>Architected XR applications, led the National Museum mixed reality kiosk deployment, and consulted on spatial computing initiatives for IIT Delhi.</p>
                     </div>
                 </div>
                 <div class="timeline-item education">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-content spotlight-card">
                         <span class="timeline-date">Education</span>
-                        <h3>Master of Animation & VFX</h3>
+                        <h3>Master of Animation &amp; VFX</h3>
                         <p class="timeline-company">AJK-MCRC, JMI, New Delhi</p>
                     </div>
                 </div>
                 <div class="timeline-item education">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Animation & VFX</h3>
+                    <div class="timeline-content spotlight-card">
+                        <span class="timeline-date">Education</span>
+                        <h3>Bachelor of Animation &amp; VFX</h3>
                         <p class="timeline-company">MGU Meghalaya</p>
                     </div>
                 </div>
@@ -532,23 +656,33 @@
     <!-- Contact Section -->
     <section class="section contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
+            <div class="contact-card spotlight-card">
+                <span class="section-eyebrow">06 / Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Extraordinary</h2>
                 <p class="contact-intro">
-                    Interested in working together? Have a project in mind? 
-                    Let's talk about bringing your ideas to life.
+                    Looking for a Principal Software Engineer to architect AI-native products, spatial computing experiences, or scalable interactive platforms? Let's connect.
                 </p>
                 <div class="contact-links">
                     <a href="mailto:sambhav200@gmail.com" class="contact-link">
-                        <span class="contact-icon">✉️</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
                         <span>sambhav200@gmail.com</span>
                     </a>
-                    <a href="https://linkedin.com/in/" class="contact-link" target="_blank" rel="noopener">
-                        <span class="contact-icon">💼</span>
+                    <a href="https://linkedin.com/in/" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://github.com/Asw-S93" class="contact-link" target="_blank" rel="noopener">
-                        <span class="contact-icon">🐙</span>
+                    <a href="https://github.com/Asw-S93" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
                         <span>GitHub</span>
                     </a>
                 </div>
@@ -558,8 +692,9 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Sambhav Aswal. Built with passion.</p>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Sambhav Aswal &bull; Principal Software Engineer</p>
+            <p class="footer-tech">Crafted with AI-Native Precision</p>
         </div>
     </footer>
 
